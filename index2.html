@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .profile-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-image-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+        
+        .blob-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #a4ec6e;
+            border-radius: 50% 50% 50% 70%;
+            transform: rotate(-10deg) scale(1.5);
+            z-index: 1;
+        }
+        
+        .profile-image {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 50%;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .profile-info {
+            flex-grow: 1;
+        }
+        
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .profile-title {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .linkedin-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .linkedin-icon a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 15px 0;
+        }
+        
+        .profile-description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .profile-card {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-image-container {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .profile-name {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="team-grid">
+            <!-- John Smith -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="blob-bg"></div>
+                        <img src="/api/placeholder/80/80" alt="John Smith" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">John Smith</h3>
+                        <p class="profile-title">CEO and Founder</p>
+                    </div>
+                    <div class="linkedin-icon">
+                        <a href="#" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="profile-description">
+                    10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy
+                </p>
+            </div>
+            
+            <!-- Jane Doe -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="blob-bg"></div>
+                        <img src="/api/placeholder/80/80" alt="Jane Doe" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Jane Doe</h3>
+                        <p class="profile-title">Director of Operations</p>
+                    </div>
+                    <div class="linkedin-icon">
+                        <a href="#" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="profile-description">
+                    7+ years of experience in project management and team leadership. Strong organizational and communication skills
+                </p>
+            </div>
+            
+            <!-- Michael Brown -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="blob-bg"></div>
+                        <img src="/api/placeholder/80/80" alt="Michael Brown" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Michael Brown</h3>
+                        <p class="profile-title">Senior SEO Specialist</p>
+                    </div>
+                    <div class="linkedin-icon">
+                        <a href="#" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="profile-description">
+                    5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization
+                </p>
+            </div>
+            
+            <!-- Emily Johnson -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="blob-bg"></div>
+                        <img src="/api/placeholder/80/80" alt="Emily Johnson" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Emily Johnson</h3>
+                        <p class="profile-title">PPC Manager</p>
+                    </div>
+                    <div class="linkedin-icon">
+                        <a href="#" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="profile-description">
+                    3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis
+                </p>
+            </div>
+            
+            <!-- Brian Williams -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="blob-bg"></div>
+                        <img src="/api/placeholder/80/80" alt="Brian Williams" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Brian Williams</h3>
+                        <p class="profile-title">Social Media Specialist</p>
+                    </div>
+                    <div class="linkedin-icon">
+                        <a href="#" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="profile-description">
+                    4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement
+                </p>
+            </div>
+            
+            <!-- Sarah Kim -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="blob-bg"></div>
+                        <img src="/api/placeholder/80/80" alt="Sarah Kim" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Sarah Kim</h3>
+                        <p class="profile-title">Content Creator</p>
+                    </div>
+                    <div class="linkedin-icon">
+                        <a href="#" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="profile-description">
+                    2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
