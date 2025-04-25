@@ -725,6 +725,7 @@ input[type="text"] {
   border-radius: 14px;
   width: 556px;
   min-height: 59px;
+  padding: 10px;
 }
 
 input[type="text"]:focus {
