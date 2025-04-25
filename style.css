@@ -565,8 +565,7 @@
   width:317px ;
   height:103px ;
   display: flex;
-  gap: 3
-  5px;
+  gap: 33px;
   /* border: 1px solid red; */
 }
 .review4b{
@@ -702,6 +701,7 @@
   background-color: rgba(243, 243, 243, 1);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .radio-group {
@@ -1246,7 +1246,7 @@ textarea:focus {
     width: 250px;
     height: 103px;
     display: flex;
-     gap: 15px; 
+     gap: 11px; 
     /* justify-content: space-between; */
   }
   .review5d {
